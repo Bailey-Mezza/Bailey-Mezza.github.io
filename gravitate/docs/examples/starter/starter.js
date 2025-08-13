@@ -9,8 +9,17 @@ const codeDescription = document.getElementById("code-block");
 const slides = [
   {
     description: `
-      <p>Welcome! This guide helps you integrate the physics renderer and engine from <strong>Gravitation.JS</strong> into your own project.</p>
-      <p><strong>Step 1:</strong> Create a HTML file with a <code>&lt;canvas&gt;</code> element where the simulation will be drawn. You can set dimensions via attributes, CSS, or make it fullscreen in JS.</p>
+      <p>Welcome! This guide helps you set up <strong>Gravitation.JS</strong> from the GitHub repo and run it locally.</p>
+      <p><strong>Prerequisites:</strong> Ensure the newest version of git is installed.</p> 
+      <p><strong>Step 1:</strong>Clone the repository. This will create a localised version of it on your device.</p>
+    `,
+    code: `#put this into your terminal
+git clone https://github.com/Bailey-Mezza/Gravitation.JS
+cd GravitationJS`
+  },
+  {
+    description: `
+      <p><strong>Step 2:</strong> Create a HTML file with a <code>&lt;canvas&gt;</code> element where the simulation will be drawn. You can set dimensions via attributes, CSS, or make it fullscreen in JS.</p>
     `,
     code: `<!-- index.html -->
 <!DOCTYPE html>
@@ -27,14 +36,14 @@ const slides = [
 
   {
     description: `
-      <p><strong>Step 2:</strong> Link a JavaScript file to your HTML using a <code>&lt;script type="module"&gt;</code> tag.</p>
+      <p><strong>Step 3:</strong> Link a JavaScript file to your HTML using a <code>&lt;script type="module"&gt;</code> tag.</p>
     `,
     code: `<!-- Add this to the bottom of index.html -->
 <script type="module" src="main.js"></script>`
   },
   {
     description: `
-      <p><strong>Step 3:</strong> Import the Engine, Renderer, as well as any Celestial Body classes you intend to use.</p>
+      <p><strong>Step 4:</strong> Import the Engine, Renderer, as well as any Celestial Body classes you intend to use.</p>
     `,
     code: `//Add this to main.js
 import { PhysicsEngine } from '/planets/src/core/physicsEngine.js';
@@ -45,7 +54,7 @@ import Planet from '/planets/src/bodies/planet.js';`
   },
   {
     description: `
-      <p><strong>Step 4:</strong> Set up the canvas, camera, scale, and any objects like planets or suns.</p>
+      <p><strong>Step 5:</strong> Set up the canvas, camera, scale, and any objects like planets or suns.</p>
     `,
     code: `//Add this to main.js
 const canvas = document.getElementById('canvas');
@@ -59,7 +68,7 @@ const suns = [];`
   },
   {
     description: `
-      <p><strong>Step 5:</strong> Create and Configure Engine and Renderer.</p>
+      <p><strong>Step 6:</strong> Create and Configure Engine and Renderer.</p>
     `,
     code: `//Add this to main.js
 const engine = new PhysicsEngine(suns, planets);
@@ -67,7 +76,7 @@ const renderer = new Renderer(canvas, ctx, camera, scaleRef);`
   },
   {
     description: `
-      <p><strong>Step 6:</strong> If you want, add a sun and planet to your project.</p>
+      <p><strong>Step 7:</strong> If you want, add a sun and planet to your project.</p>
     `,
     code: `//Add this to main.js
 suns.push(new Sun(
@@ -87,7 +96,7 @@ planets.push(new Planet(
 
   {
     description: `
-      <p><strong>Step 7:</strong> Animate Your Simulation! Start a simple loop to update and render each frame.</p>
+      <p><strong>Step 8:</strong> Animate Your Simulation! Start a simple loop to update and render each frame.</p>
     `,
     code: `//Add this to main.js
 function loop() {
@@ -200,13 +209,13 @@ toggleViewBtn.addEventListener('click', () => {
     canvas.style.display = 'block';
     codeBlock.parentElement.style.display = 'none';
     toggleViewBtn.textContent = 'Go Back to Code';
-    
+
     const ctx = canvas.getContext('2d');
 
     const scaleRef = { value: 1 };
     const isPausedRef = { value: false };
     const camera = { x: 0, y: 0 };
-    
+
 
     const engine = new PhysicsEngine(suns, planets);
     const renderer = new Renderer(canvas, ctx, camera, scaleRef);
