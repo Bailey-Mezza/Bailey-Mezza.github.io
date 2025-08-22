@@ -138,8 +138,6 @@ export function registerMobileEvents(planets, scaleRef, isPausedRef, followTarge
                 body.highlighted = true;
                 // Long press detection to open planet editor
                 if (draggingBody) {
-                    console.log("nice");
-
                     longPressTimer = setTimeout(() => {
                         updateEditorUI(draggingBody);
                         bindEditorEvents(draggingBody, engine);

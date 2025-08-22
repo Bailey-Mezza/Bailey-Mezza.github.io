@@ -101,7 +101,7 @@ canvas {
     background-color: rgba(0, 0, 0, 0);
     font-size: 3rem;
     color: white;
-    z-index: 10;
+    z-index: 20;
     pointer-events: none;
 }
 
