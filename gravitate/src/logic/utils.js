@@ -116,7 +116,7 @@ export async function getPresets() {
 
 // Apply Newtonian gravity between two bodies (symmetrical)
 // Mutates velocities in-place; assumes dt = 1 time unit.
-export function applyMutualGravity(parent, child, G) {
+export function applyMutualGravity(parent, child, G, dt) {
   const dx = parent.position.x - child.position.x;
   const dy = parent.position.y - child.position.y;
   const r = Math.sqrt(dx * dx + dy * dy);
@@ -129,10 +129,10 @@ export function applyMutualGravity(parent, child, G) {
   const fy = force * dy / r;
 
   // Acceleration = force / mass
-  child.velocity.x += fx / child.mass;
-  child.velocity.y += fy / child.mass;
+  child.velocity.x += fx / child.mass * dt;
+  child.velocity.y += fy / child.mass * dt;
 
-  parent.velocity.x -= fx / parent.mass;
-  parent.velocity.y -= fy / parent.mass;
+  parent.velocity.x -= fx / parent.mass * dt;
+  parent.velocity.y -= fy / parent.mass * dt;
 }
 
