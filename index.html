@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bailey Mezza — Software Developer</title>
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="indexStyle.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item has-text-weight-bold is-size-4" href="#home">Bailey Mezza<span
+                        class="has-text-weight-normal">.</span></a>
+            </div>
+            <div id="topNav" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="#about">About</a>
+                    <a class="navbar-item" href="#projects">Projects</a>
+                    <a class="navbar-item" href="#contact">Contact</a>
+                </div>
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-pill is-ghost-white" href="#download">
+                                <span class="icon"><i class="fa-solid fa-download"></i></span>
+                                <span>Download CV</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero is-teal">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-vcentered is-variable is-8">
+                    <div class="column is-6">
+                        <h1 class="title is-1">Software Developer: <br>Bailey Mezza</h1>
+                        <p class="subtitle is-5 mb-5">
+                            I am a determined, honest, and adaptable Masters graduate based in Belfast. I consider
+                            myself
+                            a very co-operative individual with a strong drive to see things
+                            through to completion and would love the chance to work alongside
+                            a creative team that I could grow my career with.
+                        </p>
+                        <div class="hero-cta">
+                            <a href="#about" class="button is-pill is-teal">
+                                <span class="icon"><i class="fa-regular fa-user"></i></span><span>About Me</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column is-5 is-offset-1 has-text-centered">
+                        <img class="portrait" alt="Portrait"
+                            src="baileyPhoto.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section offwhite">
+        <div class="container">
+            <div class="columns is-vcentered is-variable is-8">
+                <div class="column">
+                    <h2 class="title is-3 mb-2">About Me</h2>
+                    <p class="mb-4">
+                        MSc Graduate of the Software Development course of Queen's University Belfast,
+                        currently focusing on developing JavaScript and Java applications and a deep interest in
+                        astronomical and biological sciences.
+                    </p>
+                    <div class="tags">
+                        <span class="tag is-light is-medium">Web Development</span>
+                        <span class="tag is-light is-medium">Java Engineering</span>
+                        <span class="tag is-light is-medium">Database Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section offwhite">
+        <div class="container">
+            <div class="level mb-5">
+                <div class="level-left">
+                    <h2 class="title is-3 mb-0">Projects</h2>
+                </div>
+                <div class="level-right">
+                    <!-- Optional -->
+                    <a class="button is-teal is-pill" href="https://github.com/Bailey-Mezza"
+                        target="_blank">
+                        <span class="icon"><i class="fa-brands fa-github"></i></span>
+                        <span>View Source</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Featured project -->
+            <div class="box featured-project">
+                <div class="columns is-vcentered is-variable is-7">
+                    <div class="column">
+                        <h3 class="title is-3 mb-2">Gravitation.JS — Physics Engine & Renderer</h3>
+                        <br>
+                        <p class="subtitle is-6 has-text-grey mb-4">
+                            A real-time physics engine simulating N-body gravitational systems with a HTML5 canvas
+                            renderer.
+                            Supports elliptical orbits, adaptive time-steps, and altering planetary mass and velocity.
+                        </p>
+
+                        <div class="tags mb-4" aria-label="Tech stack">
+                            <span class="tag is-light is-medium">Vanilla JavaScript</span>
+                            <span class="tag is-light is-medium">HTML5 Canvas</span>
+                            <span class="tag is-light is-medium">Semi-Euler Integrator</span>
+                            <span class="tag is-light is-medium">N-Body Gravity</span>
+                        </div>
+
+                        <div class="columns is-mobile project-metrics" aria-label="Project performance metrics">
+                            <div class="column has-text-centered">
+                                <p class="metric-value">60</p>
+                                <p class="metric-label">FPS</p>
+                            </div>
+                            <div class="column has-text-centered">
+                                <p class="metric-value">up to 5,000</p>
+                                <p class="metric-label">Bodies (stable)</p>
+                            </div>
+                            <div class="column has-text-centered">
+                                <p class="metric-value">Canvas</p>
+                                <p class="metric-label">Renderer</p>
+                            </div>
+                        </div>
+
+
+                        <div class="buttons mt-2">
+                            <a class="button is-pill is-teal" href="gravitate/index.html" target="_blank">
+                                <span class="icon"><i class="fa-solid fa-rocket"></i></span><span>Live Demo</span>
+                            </a>
+                            <a class="button is-pill is-light" href="https://github.com/Bailey-Mezza/Gravitation.JS"
+                                target="_blank">
+                                <span class="icon"><i class="fa-brands fa-github"></i></span><span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="column is-5">
+                        <div class="project-media">
+                            <video autoplay muted loop playsinline disablepictureinpicture
+                                controlslist="nodownload nofullscreen noremoteplayback">
+                                <source src="gravitationJS_demo.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section white">
+        <div class="container">
+            <div class="columns is-variable is-6">
+                <div class="column is-6">
+                    <h2 class="title is-3">Contact</h2>
+                    <p class="mb-4">Would like to get in contact to learn more?</p>
+                    <p><span class="icon"><i class="fa-solid fa-envelope"></i></span> bmezza2812@gmail.com</p>
+                    <p><span class="icon"><i class="fa-solid fa-phone"></i></span> +44 7729789341</p>
+                </div>
+                <div class="column is-6">
+                    <form>
+                        <div class="field">
+                            <label class="label">Name</label>
+                            <div class="control"><input class="input" type="text" placeholder="Your name"></div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control"><input class="input" type="email" placeholder="Your email"></div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Message</label>
+                            <div class="control"><textarea class="textarea" placeholder="How can I help?"></textarea>
+                            </div>
+                        </div>
+                        <div class="field is-grouped is-justify-content-flex-end">
+                            <div class="control">
+                                <button class="button is-teal is-pill" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="section">
+        <div class="container has-text-centered">
+            <p>© <span id="year"></span> Bailey Mezza · Software Developer</p>
+        </div>
+    </footer>
+</body>
+
+</html>

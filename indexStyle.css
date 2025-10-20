@@ -1,0 +1,60 @@
+:root{
+  --teal:#155e59;        /* dark teal from the mockup */
+  --teal-2:#1a6e69;      /* hover */
+  --offwhite:#f6f9fb;
+  --ink:#0b1220;
+}
+
+html{scroll-behavior:smooth}
+
+/* Theme overrides */
+.navbar{box-shadow:0 2px 0 rgba(10,10,10,.02)}
+.navbar.is-transparent{background:transparent}
+.navbar.is-teal{background:var(--teal)}
+
+.button.is-pill{border-radius:9999px}
+.button.is-teal{background:var(--teal);color:#fff;border:0}
+.button.is-teal:hover{background:var(--teal-2)}
+.button.is-ghost-white{background:#fff;color:var(--ink);}
+
+/* HERO */
+.hero.is-teal{background:var(--teal);color:#fff;}
+.hero.is-teal .title,.hero.is-teal .subtitle{color:#fff}
+.hero-cta .button{margin-right:.75rem}
+
+.hero .portrait{
+  max-width: 380px;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(0,0,0,.25);
+}
+
+/* Section chrome */
+section.section{padding-top:4rem;padding-bottom:4rem}
+.section.white{background:#fff}
+.section.offwhite{background:var(--offwhite)}
+
+/* Footer */
+footer{background:#0d1514;color:#c7d2e0}
+footer a{color:#e9f0ff}
+
+/* Featured project layout (single project) */
+.featured-project { border: 1px solid #e8ecf3; border-radius: 16px; }
+.project-media img, .project-media video, .project-media canvas {
+  border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.15);
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Mini metrics */
+.project-metrics .metric-value {
+  font-weight: 800;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.project-metrics .metric-label {
+  margin-top: .25rem;
+  color: #6b7280; /* subtle */
+  font-size: .9rem;
+}
