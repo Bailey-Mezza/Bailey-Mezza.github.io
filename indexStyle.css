@@ -58,3 +58,11 @@ footer a{color:#e9f0ff}
   color: #6b7280; /* subtle */
   font-size: .9rem;
 }
+
+br {
+  color: #0b1220;
+}
+
+.bold {
+  font-weight: bold;
+}
